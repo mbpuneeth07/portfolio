@@ -1,0 +1,82 @@
+<section class="hero" id="top">
+
+  <!-- Animated background orbs -->
+  <div class="hero__bg" aria-hidden="true">
+    <div class="hero__orb hero__orb--1"></div>
+    <div class="hero__orb hero__orb--2"></div>
+    <div class="hero__orb hero__orb--3"></div>
+    <div class="hero__grid"></div>
+  </div>
+
+  <div class="container hero__content">
+    <div class="hero__layout">
+      <div class="hero__text">
+        <!-- Status chip -->
+        <div class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          Available for opportunities
+        </div>
+
+        <!-- Name & animated role -->
+        <h1 class="hero__name">{{ name }}</h1>
+
+        <div class="hero__role-wrap">
+          <span class="hero__role">{{ displayedRole }}</span>
+          <span class="hero__cursor">|</span>
+        </div>
+
+        <p class="hero__summary">{{ summary }}</p>
+
+        <!-- Contact chips -->
+        <div class="hero__contact">
+          <a [href]="'mailto:' + email" class="hero__chip">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+            {{ email }}
+          </a>
+          <a [href]="'tel:' + phone" class="hero__chip">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.27 3.23 2 2 0 0 1 3.24 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/>
+            </svg>
+            {{ phone }}
+          </a>
+          <span class="hero__chip">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+            {{ location }}
+          </span>
+          <a [href]="linkedin" target="_blank" rel="noopener" class="hero__chip">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/>
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+
+        <!-- CTAs -->
+        <div class="hero__actions">
+          <a href="#experience" class="hero__btn hero__btn--primary" (click)="scrollToExperience($event)">
+            View my work
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Profile Image -->
+      <div class="hero__visual">
+        <div class="hero__image-wrapper" style="animation: fade-up 0.6s 0.6s ease both;">
+          <img src="profile.jpg" alt="M B Puneethkumar" class="hero__image">
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero__scroll-hint" aria-hidden="true">
+      <div class="hero__scroll-line"></div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,25 @@
+<nav class="navbar" [class.scrolled]="scrolled()">
+  <div class="container navbar__inner">
+    <a class="navbar__brand" href="#top" (click)="scrollTo('#top', $event)">
+      <span class="navbar__brand-dot"></span>Puneethkumar
+    </a>
+
+    <ul class="navbar__links" [class.is-open]="menuOpen()">
+      @for (link of navLinks; track link.label) {
+        <li>
+          <a [href]="link.href" (click)="scrollTo(link.href, $event)">{{ link.label }}</a>
+        </li>
+      }
+    </ul>
+
+    <button
+      class="navbar__hamburger"
+      [class.is-open]="menuOpen()"
+      (click)="toggleMenu()"
+      aria-label="Toggle menu"
+      [attr.aria-expanded]="menuOpen()"
+    >
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>

@@ -1,0 +1,24 @@
+<section class="section projects" id="projects">
+  <div class="container">
+    <p class="section-label">Work</p>
+    <h2 class="section-heading">Projects</h2>
+
+    <div class="projects__grid">
+      @for (project of projects; track project.name) {
+        <div class="projects__card" appReveal>
+          <div class="projects__card-top">
+            <span class="projects__icon">{{ project.icon }}</span>
+            <h3 class="projects__name">{{ project.name }}</h3>
+            <p class="projects__tech">{{ project.techStack }}</p>
+          </div>
+          <p class="projects__desc">{{ project.description }}</p>
+          <div class="projects__tags">
+            @for (tag of project.tags; track tag) {
+              <span class="projects__tag">{{ tag }}</span>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,124 @@
+.experience { border-top: 1px solid var(--color-border); }
+
+.timeline {
+  &__entry {
+    display: flex;
+    gap: var(--sp-6);
+  }
+
+  &__connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    padding-top: 4px;
+  }
+
+  &__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent-gradient);
+    flex-shrink: 0;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+  }
+
+  &__line {
+    width: 1px;
+    flex: 1;
+    background: linear-gradient(to bottom, var(--accent-1), transparent);
+    margin-top: var(--sp-2);
+    min-height: 60px;
+  }
+
+  &__card {
+    flex: 1;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--sp-6);
+    margin-bottom: var(--sp-8);
+    transition: border-color 0.2s;
+    &:hover { border-color: var(--color-border-hover); }
+  }
+
+  &__card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--sp-4);
+    margin-bottom: var(--sp-6);
+  }
+
+  &__role {
+    font-size: var(--text-lg);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  &__company {
+    display: block;
+    font-size: var(--text-sm);
+    color: var(--accent-1);
+    margin-top: var(--sp-1);
+    font-weight: 500;
+  }
+
+  &__right {
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  &__period {
+    display: block;
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    font-weight: 500;
+    background: var(--color-bg-pill);
+    border: 1px solid var(--color-border);
+    padding: 3px 10px;
+    border-radius: 999px;
+    margin-bottom: var(--sp-2);
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    justify-content: flex-end;
+    font-size: var(--text-xs);
+    color: var(--color-text-light);
+  }
+
+  &__bullets {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    li {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      line-height: 1.65;
+      padding-left: var(--sp-4);
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 9px;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--accent-1);
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .timeline__card-header { flex-direction: column; gap: var(--sp-2); }
+  .timeline__right { text-align: left; }
+  .timeline__location { justify-content: flex-start; }
+}

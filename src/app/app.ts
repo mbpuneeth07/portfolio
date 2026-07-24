@@ -1,12 +1,26 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { NavbarComponent } from './navbar/navbar';
+import { HeroComponent } from './hero/hero';
+import { ExperienceComponent } from './experience/experience';
+import { ProjectsComponent } from './projects/projects';
+import { SkillsComponent } from './skills/skills';
+import { EducationComponent } from './education/education';
+import { FooterComponent } from './footer/footer';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [
+    NavbarComponent,
+    HeroComponent,
+    ExperienceComponent,
+    ProjectsComponent,
+    SkillsComponent,
+    EducationComponent,
+    FooterComponent,
+  ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
-export class App {
-  protected readonly title = signal('puneeth');
-}
+export class App {}
+

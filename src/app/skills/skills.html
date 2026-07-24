@@ -1,0 +1,22 @@
+<section class="section skills" id="skills">
+  <div class="container">
+    <p class="section-label">Expertise</p>
+    <h2 class="section-heading">Skills</h2>
+
+    <div class="skills__grid">
+      @for (group of skillGroups; track group.label) {
+        <div class="skills__category" appReveal>
+          <div class="skills__cat-header">
+            <span class="skills__cat-icon">{{ group.icon }}</span>
+            <span class="skills__cat-label">{{ group.label }}</span>
+          </div>
+          <div class="skills__pills">
+            @for (item of group.items; track item) {
+              <span class="skills__pill">{{ item }}</span>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

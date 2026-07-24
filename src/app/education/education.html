@@ -1,0 +1,38 @@
+<section class="section education" id="education">
+  <div class="container">
+    <p class="section-label">Background</p>
+    <h2 class="section-heading">Education & Certificates</h2>
+
+    <!-- Education card -->
+    <div class="edu__card" appReveal>
+      <div class="edu__card-inner">
+        <div class="edu__icon">🎓</div>
+        <div class="edu__info">
+          <h3 class="edu__degree">{{ degree }}</h3>
+          <p class="edu__institution">{{ institution }}</p>
+        </div>
+        <div class="edu__meta">
+          <span class="edu__period">{{ period }}</span>
+          <span class="edu__location">{{ location }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certificates -->
+    <div class="certs">
+      @for (cert of certificates; track cert.name) {
+        <div class="certs__item" appReveal>
+          <span class="certs__icon">{{ cert.icon }}</span>
+          <span class="certs__name">{{ cert.name }}</span>
+          <span
+            class="certs__badge"
+            [class.is-in-progress]="cert.status === 'in-progress'"
+            [class.is-completed]="cert.status === 'completed'"
+          >
+            {{ cert.statusLabel }}
+          </span>
+        </div>
+      }
+    </div>
+  </div>
+</section>

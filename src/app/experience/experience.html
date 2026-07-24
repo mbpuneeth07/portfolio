@@ -1,0 +1,41 @@
+<section class="section experience" id="experience">
+  <div class="container">
+    <p class="section-label">Career</p>
+    <h2 class="section-heading">Professional Experience</h2>
+
+    <div class="timeline">
+      @for (job of jobs; track job.company) {
+        <div class="timeline__entry" appReveal>
+          <div class="timeline__connector">
+            <div class="timeline__dot"></div>
+            <div class="timeline__line"></div>
+          </div>
+
+          <div class="timeline__card">
+            <div class="timeline__card-header">
+              <div class="timeline__left">
+                <h3 class="timeline__role">{{ job.role }}</h3>
+                <span class="timeline__company">{{ job.company }}</span>
+              </div>
+              <div class="timeline__right">
+                <span class="timeline__period">{{ job.period }}</span>
+                <span class="timeline__location">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  {{ job.location }}
+                </span>
+              </div>
+            </div>
+
+            <ul class="timeline__bullets">
+              @for (bullet of job.bullets; track bullet) {
+                <li>{{ bullet }}</li>
+              }
+            </ul>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
