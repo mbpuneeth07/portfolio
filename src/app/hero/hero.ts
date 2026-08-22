@@ -11,7 +11,7 @@ export class HeroComponent implements OnInit, OnDestroy {
   name = 'M B Puneethkumar';
   email = 'mbpuneethkumar@gmail.com';
   phone = '9480758970';
-  location = 'Mysuru, India';
+  location = 'Chennai, India';
   linkedin = 'https://www.linkedin.com/in/m-b-puneethkumar';
 
   roles = ['Software Developer', 'Full-Stack Developer'];

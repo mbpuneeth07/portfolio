@@ -24,11 +24,11 @@ export class ExperienceComponent {
       period: '07/2024 – Present',
       location: 'Chennai, India',
       bullets: [
-        'Engineered an automated media conversion pipeline (Angular → GCP Cloud Functions → AWS MediaConvert) with real-time status sync via Firebase Firestore and output storage in S3.',
-        'Implemented SRT-based live stream ingestion using AWS MediaLive, designing a scheduler-driven FSM to manage stack lifecycle from creation to teardown.',
-        'Developed a POC AI video clipper using GPT-4o-mini for match-segment detection and FFmpeg for clip extraction, with S3 + CloudFront-based delivery and auto-thumbnails.',
-        'Designed an on-demand image transformation pipeline on AWS (CloudFront → Lambda@Edge → SQS → Lambda → S3) with caching for repeat requests.',
-        'Built a bulk video upload system with Excel-based validation, resolving concurrent job race conditions via idempotency keys.',
+        'Designed a virtual playlist trimming system enabling arbitrary start/end ranges selection on live HLS streams, generated proxy manifests with synthetic segment names mapped via a JSON index, resolved at request-time by a CloudFront origin request Lambda that returns signed URLs using HMAC to the original segments reducing the execution latency and memory and cache management by almost 70% from original flow of CloudFront signing mechanism to render the playlist in real time.',
+        'Implemented SRT-based live stream ingestion with a scheduler-driven FSM for stack lifecycle management, reducing stream startup/ingestion latency by almost 50% compared to the previous RTMP protocol/method.',
+        'Built a POC AI-powered video clipper (GPT-4o-mini + FFmpeg) automating match-segment detection and clip generation for MMA broadcasts, eliminating manual clipping work previously done by the IMMAF production team.',
+        'Designed an on-demand image transformation pipeline on AWS (CloudFront → Lambda@Edge → SQS → Lambda → S3) with caching for repeat requests',
+        'Resolved race conditions in concurrent bulk video upload jobs by implementing idempotency keys, eliminating duplicate job execution and reducing failed/duplicate uploads by 20-30%'
       ]
     }
   ];
