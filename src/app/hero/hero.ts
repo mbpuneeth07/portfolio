@@ -22,7 +22,9 @@ export class HeroComponent implements OnInit, OnDestroy {
   private deleting = false;
   private pauseCount = 0;
 
-  summary = `Software Developer with 2 years of experience building scalable web applications using Angular, Node.js and Firebase. Hands-on with GCP and AWS cloud platforms.`;
+  summary = `Software Developer with 2 years of experience building scalable web applications using Angular, Node.js/TypeScript,
+NestJS and Firebase. Hands-on with AWS and GCP for serverless, event-driven live video streaming systems serving
+viewers in 50+ countries; cut stream ingestion latency by 50% and automated 100% of manual clipping work.`;
 
   scrollToExperience(event: Event) {
     event.preventDefault();

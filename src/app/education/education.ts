@@ -19,10 +19,9 @@ export class EducationComponent {
   degree = 'Bachelor of Engineering, Computer Science';
   institution = 'Vidyavardhaka College of Engineering';
   period = '01/2020 – 07/2024';
-  location = 'Mysuru, India';
+  location = 'Chennai, India';
 
   certificates: Certificate[] = [
-    { name: 'AWS Certified Solutions Architect – Associate', status: 'in-progress', statusLabel: 'In Progress · Oct 2026', icon: '☁' },
     { name: 'Architecting with Google Compute Engine', status: 'completed', statusLabel: 'Completed', icon: '✓'  },
     { name: 'Google Cloud Career Readiness – Data Analyst Track', status: 'completed', statusLabel: 'Completed', icon: '✓' },
   ];
